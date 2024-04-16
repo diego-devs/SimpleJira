@@ -1,6 +1,6 @@
 ﻿namespace SimpleJira.Interfaces
 {
-    public interface IJiraService
+    public interface IJiraActions
     {
         public Task<ICollection<string>> GetAllProjects();
         public Task<ICollection<JiraProject>> GetProject(int projectId);

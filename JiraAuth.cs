@@ -17,7 +17,7 @@ namespace SimpleJira
             _httpClient = httpClient;
         }
 
-        public async Task<string> GetAccessToken(int clientId, string clientSecret, string redirectUri, string code)
+        public async Task<string> GetAccessTokenAsync(int clientId, string clientSecret, string redirectUri, string code)
         {
             try
             {

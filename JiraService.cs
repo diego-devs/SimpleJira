@@ -8,20 +8,25 @@ using SimpleJira.Interfaces;
 
 namespace SimpleJira
 {
-    public class JiraService : IJiraService
+    public class JiraService : IJiraActions, IJiraAuth
     {
         private readonly HttpClient _httpClient;
+        private string accessToken { get; set; }
         public JiraService(HttpClient httpClient)
         {
 
         }
-
         public Task<bool> CreateNewTicket()
         {
             throw new NotImplementedException();
         }
 
         public Task<bool> DeleteTicket(int ticketId)
+        {
+            throw new NotImplementedException();
+        }
+
+        private Task<string> GetAccessTokenAsync(int clientId, string clientSecret, string redirectUri, string code)
         {
             throw new NotImplementedException();
         }
